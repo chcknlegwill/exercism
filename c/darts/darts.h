@@ -4,12 +4,10 @@
 #include <stdint.h>
 
 typedef struct {
-    float x;
-    float y;
+  float x;
+  float y;
 } coordinate_t;
 
 uint8_t score(coordinate_t landing_position);
-
-
 
 #endif
