@@ -1,6 +1,7 @@
 #include "binary_search.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
 
 
@@ -10,6 +11,36 @@
 //sort the list first
 
 #include "binary_search.h"
+
+/*
+going to implement bubble sort for first iteration
+*/
+
+void swap(int* xp, int* yp){
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+
+// An optimized version of Bubble Sort
+void bubbleSort(int arr[], int n){
+    int i, j;
+    bool swapped;
+    for (i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(&arr[j], &arr[j + 1]);
+                swapped = true;
+            }
+        }
+
+        // If no two elements were swapped by inner loop,
+        // then break
+        if (swapped == false)
+            break;
+    }
+}
 
 const int *sort(int value, const int *arr, size_t length) {
   printf("bruh");
@@ -36,13 +67,16 @@ void print_array(const int arr[], size_t length) {
 
 int main() {
   //need to sort the array first
-  int arr[] = { 1, 3, 4, 6, 8, 9, 11 };
+  int arr[] = { 1, 9, 4, 6, 8, 9, 11 };
+  int n = sizeof(arr) / sizeof(arr[0]);
   size_t length = sizeof(arr) / sizeof(arr[0]);
   int value = 6;
 
 
   printf("Unsorted array: ");
   print_array(arr, length);
+  bubbleSort(arr, n);
   printf("Sorted array :");
+  print_array(arr, length);
 
 }
