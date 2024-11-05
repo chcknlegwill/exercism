@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <string.h>
 //Thanks to siebenschlaefer for advice / mentoring to improve this solution. 
+<<<<<<< HEAD
 //^Made additional changes using a 
 
 const int* binary_search(int value, const int* arr, size_t length) {
@@ -14,21 +15,42 @@ const int* binary_search(int value, const int* arr, size_t length) {
     size_t right = length; //assign length to right
 
     while (left < right) {
+=======
+
+//Did not need the bubble sort
+//Time-complexirty: O(log n).
+//Space-complexity O(n).
+const int* binary_search(int value, const int* arr, size_t length) {
+//still works without the if statement here;
+//comment about the changes in the morning.
+
+
+    //binary search - size_t = uinsigned long
+    size_t left = 0;
+    size_t right = length - 1;
+
+    while (left <= right) {
+>>>>>>> 1b236fa (Sucessfully completed Hamming on the C track.)
       size_t mid = left + (right - left) / 2;
       if (arr[mid] == value) {
         return &arr[mid];
         }
       if(arr[mid] < value) {
         left = mid + 1;
+<<<<<<< HEAD
         } 
       else {
         right = mid;
         } //^don't - 1 anymore as the type has changed.
+=======
+      } else {
+        right = mid; //don't need to add - 1 anymore 
+      }
+>>>>>>> 1b236fa (Sucessfully completed Hamming on the C track.)
     }
     return NULL;
 }
 
-/*
 void print_array(const int arr[], size_t length) {
   for (size_t i = 0; i < length; i++) {
     printf("%d, ", arr[i]);
@@ -37,6 +59,9 @@ void print_array(const int arr[], size_t length) {
   printf("\n");
 }
 
+
+
+/*
 int main() { //uncomment the func before for debugging 
   //ARRAYS ARE ALL SORTED BEFORE USE!!!!!!
   //need to sort the array first
