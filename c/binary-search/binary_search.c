@@ -4,18 +4,6 @@
 #include <stdbool.h>
 #include <string.h>
 //Thanks to siebenschlaefer for advice / mentoring to improve this solution. 
-<<<<<<< HEAD
-//^Made additional changes using a 
-
-const int* binary_search(int value, const int* arr, size_t length) {
-    //this function should run in sub-linear time O(log n)
-
-    //binary search change left & right to size_t
-    size_t left = 0;
-    size_t right = length; //assign length to right
-
-    while (left < right) {
-=======
 
 //Did not need the bubble sort
 //Time-complexirty: O(log n).
@@ -30,23 +18,15 @@ const int* binary_search(int value, const int* arr, size_t length) {
     size_t right = length - 1;
 
     while (left <= right) {
->>>>>>> 1b236fa (Sucessfully completed Hamming on the C track.)
       size_t mid = left + (right - left) / 2;
       if (arr[mid] == value) {
         return &arr[mid];
         }
       if(arr[mid] < value) {
         left = mid + 1;
-<<<<<<< HEAD
-        } 
-      else {
-        right = mid;
-        } //^don't - 1 anymore as the type has changed.
-=======
       } else {
         right = mid; //don't need to add - 1 anymore 
       }
->>>>>>> 1b236fa (Sucessfully completed Hamming on the C track.)
     }
     return NULL;
 }
