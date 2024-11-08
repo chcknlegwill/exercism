@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <string.h>
 //Thanks to siebenschlaefer for advice / mentoring to improve this solution. 
+//^Made additional changes using a half-open interval  
 
 //Did not need the bubble sort
 //Time-complexirty: O(log n).
