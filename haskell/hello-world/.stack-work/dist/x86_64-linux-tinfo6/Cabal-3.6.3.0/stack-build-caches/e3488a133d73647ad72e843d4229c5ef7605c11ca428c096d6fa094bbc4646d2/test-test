@@ -1,0 +1,14 @@
+/home/chcknlegwill/.stack/programs/x86_64-linux/ghc-tinfo6-9.2.7/lib/ghc-9.2.7/include/ghcversion.h:
+  hash: d590b76d2d5f98f01894882dc106d920a101f52edb6a09b9a7f8dc701b075565
+? /home/chcknlegwill/exercism/haskell/hello-world/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.6.3.0/build/test/autogen/Paths_hello_world.hs
+: hash: bbe551bea868315263eaef28765473c8b1b3b9af157ae5a5473050bac8b0ca1e
+? /home/chcknlegwill/exercism/haskell/hello-world/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.6.3.0/build/test/autogen/cabal_macros.h
+: hash: a8ded51be459c2897f427731231bdcb5506f852411132f577764499de068f622
+/home/chcknlegwill/exercism/haskell/hello-world/hello-world.cabal:
+  hash: aa837f2c5cca4a702275fd908863f22682a79dea79624833985041f7b018f1e3
+/home/chcknlegwill/exercism/haskell/hello-world/package.yaml:
+  hash: 160a1a88b7a5bd0f6f1ffd3e24f56cbba5e4d4fbd7f76ea73d649199ca9d76a5
+/home/chcknlegwill/exercism/haskell/hello-world/test/Tests.hs:
+  hash: e3c9948060203a794b444e4596c90a63085f60817a31e9d626c9a3191142e0e5
+/usr/include/stdc-predef.h:
+  hash: 8db4f65e62cade8ae4d9b77960ee6aee093255acc1b637e3fb37d79179733b15
