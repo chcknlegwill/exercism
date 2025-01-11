@@ -1,0 +1,14 @@
+/home/chcknlegwill/.stack/programs/x86_64-linux/ghc-tinfo6-9.2.7/lib/ghc-9.2.7/include/ghcversion.h:
+  hash: d590b76d2d5f98f01894882dc106d920a101f52edb6a09b9a7f8dc701b075565
+? /home/chcknlegwill/exercism/haskell/reverse-string/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.6.3.0/build/test/autogen/Paths_reverse_string.hs
+: hash: cb6b755841140f3db6b096b54c59e01ae9438558f360702aab21b0ac32db3c26
+? /home/chcknlegwill/exercism/haskell/reverse-string/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.6.3.0/build/test/autogen/cabal_macros.h
+: hash: 9dfe673d1e75f3e7eb4550e8ee717f7ffd41149726b13ab0a131c927615aed54
+/home/chcknlegwill/exercism/haskell/reverse-string/package.yaml:
+  hash: b890e1480b3250833d7ab93c04b7bd4033e0b9cbfeb80993edf2f6d8ec141585
+/home/chcknlegwill/exercism/haskell/reverse-string/reverse-string.cabal:
+  hash: ed21d9b503d2725773a6c368b74c53f3c47567c4aab600aef197bd8d3121aec4
+/home/chcknlegwill/exercism/haskell/reverse-string/test/Tests.hs:
+  hash: eebd1102b600e9983bfbfb9f06c9ca3ce3f8cb206d758c7ef4f12fd9b650b1c2
+/usr/include/stdc-predef.h:
+  hash: 8db4f65e62cade8ae4d9b77960ee6aee093255acc1b637e3fb37d79179733b15
