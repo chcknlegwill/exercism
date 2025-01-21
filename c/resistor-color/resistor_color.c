@@ -14,23 +14,19 @@
 #define WHITE 9
 
 
-
-
 resistor_band_t color_code(resistor_band_t band) {
   // declare colors:
-  //const char* colors[]  = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};
-
+  const char* colors[]  = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};
     printf("color at index is %s \n", colors[band]);
-
-
     return band;
   }
 
 
+/*
   const resistor_band_t colors(void) {
     const resistor_band_t colors[]  = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};
     return colors;
 
   }
-
+*/
 
