@@ -10,7 +10,6 @@ mod single_verse {
     }
 
     #[test]
-    #[ignore]
     fn last_generic_verse() {
         assert_eq!(
             verse(3).trim(),
@@ -19,7 +18,6 @@ mod single_verse {
     }
 
     #[test]
-    #[ignore]
     fn verse_with_2_bottles() {
         assert_eq!(
             verse(2).trim(),
@@ -28,7 +26,6 @@ mod single_verse {
     }
 
     #[test]
-    #[ignore]
     fn verse_with_1_bottle() {
         assert_eq!(
             verse(1).trim(),
@@ -37,7 +34,6 @@ mod single_verse {
     }
 
     #[test]
-    #[ignore]
     fn verse_with_0_bottles() {
         assert_eq!(
             verse(0).trim(),
@@ -50,7 +46,6 @@ mod multiple_verses {
     use beer_song::*;
 
     #[test]
-    #[ignore]
     fn first_two_verses() {
         assert_eq!(
             sing(99, 98).trim(),
@@ -59,7 +54,6 @@ mod multiple_verses {
     }
 
     #[test]
-    #[ignore]
     fn last_three_verses() {
         assert_eq!(
             sing(2, 0).trim(),
@@ -68,7 +62,6 @@ mod multiple_verses {
     }
 
     #[test]
-    #[ignore]
     fn all_verses() {
         assert_eq!(
             sing(99, 0).trim(),
