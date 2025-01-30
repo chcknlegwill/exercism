@@ -5,7 +5,6 @@ use time::Duration;
 
 // Returns a DateTime one billion seconds after start.
 pub fn after(start: DateTime) -> DateTime {
-    //todo!("What time is a gigasecond later than {start}");
     //gigasecond is a thousand mllion seconds (1,000,000,000). 
     let gigasecond = Duration::seconds(1_000_000_000);
     start + gigasecond

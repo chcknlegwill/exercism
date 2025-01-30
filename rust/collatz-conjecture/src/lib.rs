@@ -11,8 +11,6 @@ pub fn collatz(n: u64) -> Option<u64> {
     //repeat above steps indefinitley 
     let mut steps: u64 = 0; 
     let mut a: u64; 
-    //let mut b: u64 = 0;
-    let steps_return: Option<u64>;
     a = n;
     //chaning a to be mutable insteas of changing the 
     //function declaration above.

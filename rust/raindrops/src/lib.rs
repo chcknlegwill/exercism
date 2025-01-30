@@ -7,8 +7,8 @@ pub fn raindrops(n: u32) -> String {
     let mut chars = String::new();
 
     if n == 1 {
-        chars.push_str(&n.to_string()); //chars.push_str working!!!!
-        return chars;
+      chars.push_str(&n.to_string()); //chars.push_str working!!!!
+      return chars;
     } 
     if n % 3 == 0 { //n is divisible by 3.
         chars.push_str("Pling");
