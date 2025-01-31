@@ -19,7 +19,7 @@ pub fn sum_of_squares(n: u32) -> u32 {
     let mut b = 0;
     //println!("b: {}", b);
     while x > 0 {
-        b = b + x * x;
+        b += x * x;
         x -= 1;
     }
     b
@@ -29,8 +29,6 @@ pub fn sum_of_squares(n: u32) -> u32 {
 pub fn difference(n: u32) -> u32 {
     //todo!("difference between square of sum of 1...{n} and sum of squares of 1...{n}")
     //ig you call each func into a number and then just calculate the difference
-    let square_of_sum = square_of_sum(n);
-    let sum_of_squares = sum_of_squares(n);
-    let differnce = square_of_sum - sum_of_squares;
-    differnce
+    square_of_sum(n) - sum_of_squares(n)
+    
 }
