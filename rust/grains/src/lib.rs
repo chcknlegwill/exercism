@@ -17,7 +17,7 @@ pub fn square(s: u32) -> u64 {
       //println!("Grains: {}", grains);
       i += 1;
     }
-    return grains
+    grains
 
 }
 
@@ -25,11 +25,10 @@ pub fn total() -> u64 {
   //sum of the total
   let mut total: u64 = 0;
   let mut i = 0;
-  let mut grains = 1;
   while i < 64 {
     i += 1;
     total += square(i);
   } 
-  return total 
+  total 
 
 }
