@@ -7,7 +7,7 @@
 //^Made additional changes using a half-open interval  
 
 //Did not need the bubble sort
-//Time-complexirty: O(log n).
+//Time-complexity: O(log n).
 //Space-complexity O(n).
 const int* binary_search(int value, const int* arr, size_t length) {
 //still works without the if statement here;
