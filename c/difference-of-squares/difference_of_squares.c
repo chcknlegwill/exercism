@@ -13,10 +13,11 @@ unsigned int square_of_sum(unsigned int number) {
   int sum = 0;
   for (int i = 1; i <= num; i++) {
     sum += i;   
-    printf("%d", i); 
+    printf("i = %d | ", i); 
     printf("sum = %d\n", sum); 
   } //we have 15!!!! we are getting somewhere
-  return number;
+  sum = sum * sum;
+  return sum;
 }
 
 unsigned int difference_of_squares(unsigned int number) {
