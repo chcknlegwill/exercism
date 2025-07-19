@@ -17,10 +17,9 @@ char *to_rna(const char *dna) {
   char *empty = malloc(1);
   if (empty) empty[0] = '\0';
   return empty;
-  //passing first test!!
 
   char *rna = length;
-  printf("rna: %d", rna);
+  printf("rna: %s", rna);
 
   for (int i = 0; i < length; i++) {
     switch (dna[i]) {
