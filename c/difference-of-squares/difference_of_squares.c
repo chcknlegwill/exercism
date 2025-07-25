@@ -1,4 +1,5 @@
 #include "difference_of_squares.h"
+#include <stdio.h>
 //Time-complexity: O(n)
 //Space-complexity: O(1) 
 //^For all functions
@@ -9,6 +10,7 @@ unsigned int sum_of_squares(unsigned int number)  {
   for (int i = 1; i <= num; i++) {
     sum += i * i;
   }
+  printf("sum_squares sum: %d\n", sum);
   return sum;
 }
 
@@ -19,6 +21,7 @@ unsigned int square_of_sum(unsigned int number) {
     sum += i;   
   }
   sum = sum * sum;
+  printf("square_sums sum: %d\n", sum);
   return sum;
 }
 
