@@ -10,11 +10,23 @@ robot_status_t robot_create(robot_direction_t direction, int x, int y) {
 
 void robot_move(robot_status_t *robot, const char *commands) {
   robot->position.x = robot->position.x; 
+  printf("Initial position: (%d, %d), Direction: %d\n", robot->position.x, robot->position.y, robot->direction);
   printf("commands = %s\n", commands);
   int bruh = strlen(commands);
   printf("num of commands: %d\n", bruh);
+  //need to get individual commands e.g. command
+
   for (int i = 0; i < bruh; i++) {
-    printf("bruh");
+    //printf("i = %d \n", i);
+    if (commands[i] == "R") {
+      robot_direction_t = ;
+    }
+
   }
+
+
+
+
+
   //running - now I just need to pass the other tests
 }

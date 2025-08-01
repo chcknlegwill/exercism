@@ -1,6 +1,7 @@
 #[derive(Debug)]
 pub struct Clock;
 
+//I'll do this when I have more time
 impl Clock {
     pub fn new(hours: i32, minutes: i32) -> Self {
       let _hours = hours;
@@ -14,7 +15,6 @@ impl Clock {
         i += 1;
       }
       println!("{}", realHours);
-      Clock;
 
 
     }
