@@ -1,23 +1,27 @@
 #include "raindrops.h"
 #include <stdio.h>
+#include <string.h>
 
 void convert(char result[], int drops) {
+
   //printf("Result[] = %s\n", result);
   //printf("Drops = %d\n", drops);
-  result[0] = "\0";
-  char str[20];
-  char pling[5] = "pling";
 
+  //sprintf(result, "%d", drops);
+  //printf("Result[] = %s\n", result);
+  result[0] = '\0';
   if (drops % 3 == 0) {
-    result[1] += pling;
+    strcat(result, "Pling");
   }
-  else {
-    sprintf(str, "%d", drops);
-    printf("int is now a string: %s", str);
-
+  if (drops % 5 == 0) {
+    strcat(result, "Plang");
+  }
+  if (drops % 7 == 0) {
+    strcat(result, "Plong");
+  } 
+  if (result[0]=='\0') {
+    sprintf(result, "%d", drops);
   }
 
 }
  
-
-}
