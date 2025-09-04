@@ -4,32 +4,34 @@
 #include <string.h>
 
 
-
 char *to_rna(const char *dna) {
-  printf("dna: %s\n", dna);
-  size_t length = strlen(dna); 
-  printf("dna length as a number: %ld", length);
+  //printf("dna: %s\n", dna);
+  int length = strlen(dna); 
+  char *rna = malloc(length + 1); //get length of rna from dna  
 
-  //keep on getting segmentation faults
-  //static char empty[] = "";
-  //return empty;          |--> reusing static string, need dynamic relocation
+  //need to handle if rna == NULL:
+  if (rna == NULL) {
+    return NULL;
+  } 
 
-  char *empty = malloc(1);
-  if (empty) empty[0] = '\0';
-  return empty;
-
-  char *rna = length;
-  printf("rna: %s", rna);
 
   for (int i = 0; i < length; i++) {
-    switch (dna[i]) {
-      case 'G':
-        rna[i] = "C";
-        break;
-      //case ''
+    if (dna[i] == 'C') {
+      rna[i] = 'G';
+    } else if (dna[i] == 'G') {
+      rna[i] = 'C';
+    } else if (dna[i] == 'T') {
+      rna[i] = 'A';
+    } else if(dna[i] == 'A') {
+      rna[i] = 'U';
+    } else {
+      free(rna);
+      return NULL;
     }
-
   }
+  //printf("rna %s\n", rna);
+  rna[length] = '\0';
+  //need to handle NULL & add terminator at the end to avoid error: Expected '' Was '\x80'
 
-  return NULL;
+  return rna;
 }
