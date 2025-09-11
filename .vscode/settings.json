@@ -64,6 +64,7 @@
     "*.embeddedhtml": "html",
     "*.toml": "toml",
     "stdlib.h": "c",
-    "type_traits": "c"
+    "type_traits": "c",
+    "math.h": "c"
   }
 }
