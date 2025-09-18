@@ -7,7 +7,6 @@ bool is_armstrong_number(int number) {
     return true;
   }
 
-
   printf("number: %d ", number);
   int numLength = 0;
   int numTemp = number;
@@ -26,10 +25,30 @@ bool is_armstrong_number(int number) {
     numTemp /= 10;
   }
 
+  printf("\narray: ");
   for(int i = 0; i < numLength; i++) {
     printf("%d", numArray[i]);
   }
-  printf("\nnumArray holds all numbers in the correct order!!!");
+  printf("\n");
+  //printf("\nnumArray holds all numbers in the correct order!!!");
   
+  //return false;
+
+  int armstrongNumber = 0;
+  for(int i = 0; i < numLength; i++) {
+    //printf(" numarray:[%d]: %d ", i, numArray[i]);
+    //printf("\n armstrong number: %d\n", armstrongNumber);
+    int numberPower = 1;
+    for(int j = 0; j < numLength; j++) {
+      numberPower *= numArray[i];
+    }
+    armstrongNumber += numberPower;
+  }
+
+  if (armstrongNumber == number) {
+    //printf("\n armstrong number: %d\n", armstrongNumber);
+    return true;
+  }
+
   return false;
 }
