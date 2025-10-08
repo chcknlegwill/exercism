@@ -65,6 +65,8 @@
     "*.toml": "toml",
     "stdlib.h": "c",
     "type_traits": "c",
-    "math.h": "c"
+    "math.h": "c",
+    "stdio.h": "c",
+    "ctype.h": "c"
   }
 }
