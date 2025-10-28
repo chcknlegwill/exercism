@@ -11,7 +11,7 @@ bool is_armstrong_number(int number) {
   int numLength = 0;
   int numTemp = number;
   while (numTemp > 0) {
-    numLength++;
+    numLength+=1;
     numTemp /= 10;
   }
   printf("numLength: %d\n", numLength);
