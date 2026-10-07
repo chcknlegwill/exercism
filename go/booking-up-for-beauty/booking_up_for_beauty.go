@@ -3,8 +3,8 @@ package booking
 import(
 	"time"
 	"fmt"
-	"strings"
-	"strconv"
+	//"strings"
+	//"strconv"
 )
 
 
@@ -12,72 +12,79 @@ import(
 // Schedule returns a time.Time from a string containing a date.
 func Schedule(date string) time.Time {
 
-	fmt.Printf("input: %q \n\n", date)
-	//fmt.Printf("now: %s \n\n", time.Now())
+	layout := "1/2/2006 15:04:05"
 	
-	//going to try t.Log
+	t, err := time.Parse(layout, date)
+	if err != nil {
+		fmt.Println("parsing error: ", err)
+		return t
+	}
 
-	/*
-	then := time.Date(
-		2009, 11, 17, 20, 34, 58, 651387237, time.UTC)
-		*/
+	return t
 
-	parts := strings.Split(date, " ")
-	dateParts := strings.Split(parts[0], "/")
-	timeParts := strings.Split(parts[1], ":")
-
-	year, _ := strconv.Atoi(dateParts[0])
-	month, _ := strconv.Atoi(dateParts[1])
-	day, _ := strconv.Atoi(dateParts[2])
-
-	hour, _ := strconv.Atoi(timeParts[0])
-	minute, _ := strconv.Atoi(timeParts[1])
-	second, _ := strconv.Atoi(timeParts[2])
-
-	//fmt.Println("month: %s\n", dateParts[0])
-	fmt.Printf("day: %s\n", dateParts[0])
-	fmt.Printf("month: %s\n", dateParts[1])
-	fmt.Printf("year: %s\n\n", dateParts[2])
-
-
-	fmt.Printf("hour: %s\n", timeParts[0])
-	fmt.Printf("minute: %s\n", timeParts[1])
-	fmt.Printf("second: %s\n", timeParts[2])
-
-
-
-	return time.Date(
-		year,
-		time.Month(month), 
-		day,
-		hour,
-		minute,
-		second,
-		0,
-		time.UTC,
-		
-	)
-
-
-	//return then 
 }
 
 // HasPassed returns whether a date has passed.
 func HasPassed(date string) bool {
-	panic("Please implement the HasPassed function")
+	now := time.Now() 
+	layout := "January 2, 2006 15:04:05"
+	
+	t, err := time.Parse(layout, date)
+	if err != nil {
+		fmt.Println("parsing error: ", err)
+		return false
+	}
+
+
+	if t.Before(now) {
+		return true 
+	} 
+
+	return false
+
 }
 
 // IsAfternoonAppointment returns whether a time is in the afternoon.
 func IsAfternoonAppointment(date string) bool {
-	panic("Please implement the IsAfternoonAppointment function")
+	layout := "Monday, January 2, 2006 15:04:05"
+	
+	t, err := time.Parse(layout, date)
+	if err != nil {
+		fmt.Println("parsing error: ", err)
+		return false
+	}
+
+	if t.Hour() >= 12 && t.Hour() < 18 {
+		return true
+	}
+
+	return false 
+
 }
 
 // Description returns a formatted string of the appointment time.
 func Description(date string) string {
-	panic("Please implement the Description function")
+	layout := "1/2/2006 15:04:05"
+
+	fmt.Println("date(string): ", date)
+	fmt.Println("")
+
+
+	t, err := time.Parse(layout, date) 
+	if err != nil {
+		fmt.Println("err: ", err)
+	}
+
+	return_string := fmt.Sprintf("You have an appointment on %v, %v %v, %v, at %v:%v.", t.Weekday(), t.Month(), t.Day(), t.Year(), t.Hour(), t.Minute())
+	
+	return return_string
+
 }
 
 // AnniversaryDate returns a Time with this year's anniversary.
 func AnniversaryDate() time.Time {
-	panic("Please implement the AnniversaryDate function")
+	now := time.Now()
+
+	return time.Date(now.Year(), time.September, 15, 0, 0, 0, 0, time.UTC) 
+
 }
